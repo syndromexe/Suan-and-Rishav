@@ -83,11 +83,23 @@
 
 //armstrong
 
-let temp = 0
-let i =0
-console.log('The armstrong numbers are')
-for (i ; i<10; i++)
-    {
-        temp = temp + i;
-        console.log(temp);
-    };
+let num = 153
+let temp= num
+let check =0
+const count= (num) => Math.abs(num).toString().length;
+const digitcount = count(num);
+while(temp >0)
+{
+    check = check + (Math.pow(temp%10,digitcount));
+    temp =  Math.trunc(temp/10);
+}
+if (check == num)
+{
+    console.log('Is armstrong number')
+}
+else{
+    console.log('Is not armstrong')
+}
+
+
+//test
